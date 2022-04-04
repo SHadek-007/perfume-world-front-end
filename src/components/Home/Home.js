@@ -5,7 +5,7 @@ import ReviewDetails from "../ReviewDetails/ReviewDetails";
 import './Home.css';
 const Home = () => {
   const [reviews,setReviews] = useReview();
-  const homeRevieew = reviews.slice(0,3);
+  const homeRevieew = reviews.slice(3,6);
   return (
     <div>
       <Container>
@@ -22,8 +22,8 @@ const Home = () => {
               <img className="img-container" src="https://rukminim2.flixcart.com/image/416/416/ku4ezrk0/perfume/e/d/7/cologne-spray-base-camp-perfume-ustraa-men-original-imag7bgrnpbn57dh.jpeg?q=70" alt="" />
           </Col>
         </Row>
-        <div>
-          <h2 className="text-center">Customer Review</h2>
+        <div className="my-4">
+          <h2 className="text-center my-4">Customer Review: {homeRevieew.length}</h2>
           <div>
             <Container>
               <Row xs={1} md={3} className="g-4">
@@ -32,7 +32,7 @@ const Home = () => {
             }
               </Row>
             </Container>
-            <div className="text-center pb-4">
+            <div className="text-center pb-4 mt-4">
             <button className="b-style mt-4 px-3 py-2"><Link className="text-decoration-none text-white" to={'/reviews'}>See all Reviews</Link></button>
             </div>
           </div>
