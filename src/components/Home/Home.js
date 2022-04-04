@@ -1,8 +1,11 @@
 import { Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import useReview from "../../hooks/useReview";
+import ReviewDetails from "../ReviewDetails/ReviewDetails";
 import './Home.css';
 const Home = () => {
   const [reviews,setReviews] = useReview();
+  const homeRevieew = reviews.slice(0,3);
   return (
     <div>
       <Container>
@@ -22,7 +25,16 @@ const Home = () => {
         <div>
           <h2 className="text-center">Customer Review</h2>
           <div>
-            
+            <Container>
+              <Row xs={1} md={3} className="g-4">
+              {
+              homeRevieew.map(review=> <ReviewDetails review={review} key={review.id}></ReviewDetails>)
+            }
+              </Row>
+            </Container>
+            <div className="text-center pb-4">
+            <button className="btn btn-info mt-4 "><Link className="text-decoration-none text-dark" to={'/reviews'}>See all Reviews</Link></button>
+            </div>
           </div>
         </div>
       </Container>
