@@ -2,3 +2,15 @@
     display: flex;
     align-items: center;
 }
+.img-container{
+    width: 90%;
+}
+.second-title{
+    color: #004AD0;
+}
+.b-style{
+    background-color: #008FEE;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
