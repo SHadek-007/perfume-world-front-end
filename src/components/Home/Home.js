@@ -1,7 +1,8 @@
-import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import useReview from "../../hooks/useReview";
 import './Home.css';
 const Home = () => {
+  const [reviews,setReviews] = useReview();
   return (
     <div>
       <Container>
@@ -18,6 +19,12 @@ const Home = () => {
               <img src="https://rukminim2.flixcart.com/image/416/416/ku4ezrk0/perfume/e/d/7/cologne-spray-base-camp-perfume-ustraa-men-original-imag7bgrnpbn57dh.jpeg?q=70" alt="" />
           </Col>
         </Row>
+        <div>
+          <h2 className="text-center">Customer Review</h2>
+          <div>
+            
+          </div>
+        </div>
       </Container>
     </div>
   );
